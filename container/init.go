@@ -6,7 +6,7 @@ import (
 	"syscall"
 )
 
-func RunCOntainerInitProcess(command string, args []string) error {
+func RunContainerInitProcess(command string, args []string) error {
 	logrus.Infof("command %s", command)
 
 	defaultMountFlags := syscall.MS_NOEXEC | syscall.MS_NOSUID | syscall.MS_NODEV
