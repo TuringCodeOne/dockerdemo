@@ -8,7 +8,7 @@ import (
 
 
 
-var initCommand = cli.Command {
+var InitCommand = cli.Command {
 	Name: "init",
 	Usage: `Init container process run user's process in container. Don't call it outside`,
 	Action: func(context *cli.Context) error {

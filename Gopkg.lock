@@ -10,6 +10,17 @@
   version = "v0.8.7"
 
 [[projects]]
+  branch = "master"
+  digest = "1:e16a44f2577496c9d51682fcf95746eeff171724191a23c24bdc8ea48ad5fce0"
+  name = "github.com/TuringCodeOne/dockerdemo"
+  packages = [
+    "command",
+    "container",
+  ]
+  pruneopts = "UT"
+  revision = "ef456e9f74b61a6dc7c4dfff122131a3ff98f5f0"
+
+[[projects]]
   digest = "1:7cb4fdca4c251b3ef8027c90ea35f70c7b661a593b9eeae34753c65499098bb1"
   name = "github.com/cpuguy83/go-md2man"
   packages = ["md2man"]
@@ -46,6 +57,8 @@
   analyzer-version = 1
   input-imports = [
     "github.com/Sirupsen/logrus",
+    "github.com/TuringCodeOne/dockerdemo/command",
+    "github.com/TuringCodeOne/dockerdemo/container",
     "github.com/urfave/cli",
   ]
   solver-name = "gps-cdcl"

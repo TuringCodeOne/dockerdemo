@@ -5,7 +5,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-var runCommand = cli.Command {
+var RunCommand = cli.Command {
 	Name: "run",
 	Usage: `Create a container with namespace and cgroups limit,
 			dockerdemo run -it [command]`,
