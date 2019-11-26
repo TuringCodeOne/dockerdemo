@@ -6,25 +6,25 @@ import (
 	"github.com/urfave/cli"
 )
 
-var RunCommand = cli.Command {
-	Name: "run",
+var RunCommand = cli.Command{
+	Name:  "run",
 	Usage: `Create a container with namespace and cgroups limit, dockerdemo run -it [command]`,
-	Flags: []cli.Flag {
-		cli.BoolFlag {
-			Name:        "it",
-			Usage:       "enable tty",
-		},
-		cli.StringFlag {
-			Name:        "m",
-			Usage:       "memory limit",
-		},
-		cli.StringFlag {
-			Name:        "cpushare",
-			Usage:       "cpushare limit",
+	Flags: []cli.Flag{
+		cli.BoolFlag{
+			Name:  "it",
+			Usage: "enable tty",
 		},
 		cli.StringFlag{
-			Name:        "cpuset",
-			Usage:       "cpuset limit",
+			Name:  "m",
+			Usage: "memory limit",
+		},
+		cli.StringFlag{
+			Name:  "cpushare",
+			Usage: "cpushare limit",
+		},
+		cli.StringFlag{
+			Name:  "cpuset",
+			Usage: "cpuset limit",
 		},
 	},
 	Action: func(context *cli.Context) error {
@@ -38,8 +38,8 @@ var RunCommand = cli.Command {
 		tty := context.Bool("it")
 		resConf := &subsystem.ResourceConfig{
 			MemoryLimit: context.String("m"),
-			CpuShare:    context.String("cpuset"),
-			CpuSet:      context.String("cpushare"),
+			CpuShare:    context.String("cpushare"),
+			CpuSet:      context.String("cpuset"),
 		}
 
 		Run(tty, cmdArray, resConf)
